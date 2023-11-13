@@ -48,4 +48,23 @@ export const CN_PLUGINS: BuiltinPlugin[] = [
     createdAt: 1694703673000,
     enable: false,
   },
+  {
+    name: "Stable Diffusion",
+    toolName: "stable_diffusion_image_generator",
+    lang: "cn",
+    description:
+      "Stable Diffusion 图像生成模型。使用本插件需要配置 Cloudflare R2 对象存储服务以及 stable-diffusion-webui 接口。",
+    builtin: true,
+    createdAt: 1688899480510,
+    enable: false,
+  },
+  {
+    name: "Arxiv",
+    toolName: "arxiv",
+    lang: "cn",
+    description: "使用 Arxiv 接口搜索并获取文章信息。",
+    builtin: true,
+    createdAt: 1699265115000,
+    enable: false,
+  },
 ];

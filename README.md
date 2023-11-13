@@ -41,19 +41,19 @@
     - [SerpAPI](https://js.langchain.com/docs/api/tools/classes/SerpAPI)
     - [BingSerpAPI](https://js.langchain.com/docs/api/tools/classes/BingSerpAPI)
     - DuckDuckGo
-  
   - 计算
     - [Calculator](https://js.langchain.com/docs/api/tools_calculator/classes/Calculator)
-  
   - 网络请求
     - [WebBrowser](https://js.langchain.com/docs/api/tools_webbrowser/classes/WebBrowser)
-  
   - 其它
     - [Wiki](https://js.langchain.com/docs/api/tools/classes/WikipediaQueryRun)
-    - DALL-E
-      - DALL-E 插件需要配置 R2 存储，请参考 [Cloudflare R2 服务配置指南](./docs/cloudflare-r2-cn.md) 配置
-  
-
+    - DALL-E 3
+      - DALL-E 3 插件需要配置 R2 存储，请参考 [Cloudflare R2 服务配置指南](./docs/cloudflare-r2-cn.md) 配置
+    - StableDiffusion
+      - 本插件目前为测试版本，后续可能会有较大的变更，请谨慎使用
+      - 使用本插件需要一定的专业知识，Stable Diffusion 本身的相关问题不在本项目的解答范围内，如果您确定要使用本插件请参考 [Stable Diffusion 插件配置指南](./docs/stable-diffusion-plugin-cn.md) 文档进行配置
+      - StableDiffusion 插件需要配置 R2 存储，请参考 [Cloudflare R2 服务配置指南](./docs/cloudflare-r2-cn.md) 配置
+    - Arxiv
 
 ## 开发计划
 
@@ -190,6 +190,7 @@ Cloudflare R2 访问密钥 ID，使用 `DALL-E` 插件时需要配置。
 ### `R2_SECRET_ACCESS_KEY` （可选）
 
 Cloudflare R2 机密访问密钥，使用 `DALL-E` 插件时需要配置。
+
 ### `R2_BUCKET` （可选）
 
 Cloudflare R2 Bucket 名称，使用 `DALL-E` 插件时需要配置。
@@ -203,8 +204,6 @@ Cloudflare R2 Bucket 名称，使用 `DALL-E` 插件时需要配置。
 > ⚠️ 注意：docker 版本在大多数时间都会落后最新的版本 1 到 2 天，所以部署后会持续出现“存在更新”的提示，属于正常现象。
 
 ```shell
-docker pull gosuto/chatgpt-next-web-langchain
-
 docker run -d -p 3000:3000 \
    -e OPENAI_API_KEY="sk-xxxx" \
    -e CODE="页面访问密码" \
@@ -229,6 +228,17 @@ docker run -d -p 3000:3000 \
 ```
 
 如果你需要指定其他环境变量，请自行在上述命令中增加 `-e 环境变量=环境变量值` 来指定。
+
+## 同步聊天记录（UpStash）
+
+| [简体中文](./docs/synchronise-chat-logs-cn.md) | [English](./docs/synchronise-chat-logs-en.md) | [Italiano](./docs/synchronise-chat-logs-es.md) | [日本語](./docs/synchronise-chat-logs-ja.md) | [한국어](./docs/synchronise-chat-logs-ko.md)
+
+
+## 贡献者
+
+<a href="https://github.com/Hk-Gosuto/ChatGPT-Next-Web-LangChain/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Hk-Gosuto/ChatGPT-Next-Web-LangChain" />
+</a>
 
 ## 截图
 
